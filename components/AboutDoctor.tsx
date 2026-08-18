@@ -107,11 +107,14 @@ export default function AboutDoctor() {
               <div className="mt-10 grid gap-px border border-[#e2e1dc] bg-[#e2e1dc] sm:grid-cols-2">
                 {credentials.map((item) => {
                   const Icon = item.icon;
+                  const isFbr = item.label === "FBR Registration";
 
                   return (
                     <div
                       key={item.label}
-                      className="bg-white p-5"
+                      className={`bg-white p-5 ${
+                        isFbr ? "sm:col-span-2" : ""
+                      }`}
                     >
                       <div className="flex items-start gap-4">
                         <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#e3dfd1] bg-[#faf8f0]">
