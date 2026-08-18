@@ -29,6 +29,12 @@ const credentials = [
     value: "0224827",
     note: "Company registration",
   },
+  {
+    icon: Building2,
+    label: "FBR Registration",
+    value: "6864487",
+    note: "Federal Board of Revenue",
+  },
 ];
 
 export default function AboutDoctor() {
@@ -94,7 +100,7 @@ export default function AboutDoctor() {
                 The clinic's approach is centered on careful listening,
                 individual consideration, and a structured consultation model.
                 Professional credentials and registration information are
-                presented according to the clinic's approved information.
+                presented as part of the clinic's professional profile.
               </p>
 
               {/* Credential grid */}
@@ -133,20 +139,6 @@ export default function AboutDoctor() {
                     </div>
                   );
                 })}
-              </div>
-
-              {/* Professional note */}
-              <div className="mt-8 flex items-start gap-3 border-t border-[#e5e4df] pt-6">
-                <ShieldCheck
-                  size={18}
-                  strokeWidth={1.4}
-                  className="mt-0.5 shrink-0 text-[#8b7746]"
-                />
-
-                <p className="text-[12px] leading-6 text-[#71798a]">
-                  Registration and professional information should be verified
-                  and approved before the final website launch.
-                </p>
               </div>
             </div>
           </div>

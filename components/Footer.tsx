@@ -167,11 +167,15 @@ export default function Footer() {
 
             <span className="hidden h-1 w-1 rounded-full bg-[var(--gold)] sm:block" />
 
+            <span>FBR Registration 6864487</span>
+
+            <span className="hidden h-1 w-1 rounded-full bg-[var(--gold)] sm:block" />
+
             <span>SECP CUIN 0224827</span>
           </div>
         </div>
 
-        {/* Bottom */}
+        {/* Legal links */}
         <div className="mt-8 flex flex-col gap-6 border-b border-white/[0.08] pb-8 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap gap-x-6 gap-y-3 text-[11px] text-white/40">
             <a
@@ -212,16 +216,6 @@ export default function Footer() {
 
             <span>Professional communication via email</span>
           </div>
-        </div>
-
-        {/* Disclaimer */}
-        <div className="mt-7 max-w-[1000px]">
-          <p className="text-[10px] leading-6 text-white/25">
-            Final website content, professional credentials, consultation
-            policy, privacy policy, terms and conditions, refund wording,
-            payment information, and healthcare disclaimer should be reviewed
-            and approved before launch.
-          </p>
         </div>
 
         {/* Copyright */}
