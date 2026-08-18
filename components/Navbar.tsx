@@ -20,7 +20,7 @@ export default function Navbar() {
         >
           <div className="relative flex h-[52px] w-[52px] shrink-0 items-center justify-center">
             <Image
-              src="/images/logo.png"
+              src="/images/final.png"
               alt="Baba Ali Homoeopathic Clinic"
               width={52}
               height={52}
