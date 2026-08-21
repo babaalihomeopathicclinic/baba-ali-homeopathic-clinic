@@ -32,15 +32,9 @@ export default function Footer() {
               </div>
             </div>
 
-            <p className="mt-7 max-w-[470px] text-[13px] leading-7 text-white/50">
-              Specialized homoeopathic consultation for psychological and
-              emotional concerns, provided through a private and structured
-              consultation process.
-            </p>
-
             <a
               href="mailto:info@babaalihomeopathicclinic.com"
-              className="mt-6 inline-flex items-center gap-3 text-[12px] text-white/70 transition-colors hover:text-[var(--gold-soft)]"
+              className="mt-7 inline-flex items-center gap-3 text-[12px] text-white/70 transition-colors hover:text-[var(--gold-soft)]"
             >
               <Mail
                 size={16}
@@ -102,51 +96,41 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Payment */}
+          {/* Payment account */}
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--gold-soft)]">
-              Payment Details
+              Payment Account
             </p>
 
-            <div className="mt-6 border border-white/[0.08] bg-white/[0.025] p-6">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-white/35">
-                Initial Assessment Fee
-              </p>
+            <div className="mt-6 space-y-5 border-t border-white/[0.08] pt-6">
+              <div>
+                <p className="text-[9px] uppercase tracking-[0.16em] text-white/30">
+                  Account Name
+                </p>
 
-              <p className="mt-2 font-serif text-[28px] text-white">
-                PKR 50,000
-              </p>
+                <p className="mt-1 text-[13px] text-white/70">
+                  MUHAMMAD SHOUKAT ALI
+                </p>
+              </div>
 
-              <div className="mt-6 space-y-4 border-t border-white/[0.08] pt-5">
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.16em] text-white/30">
-                    Account Name
-                  </p>
+              <div>
+                <p className="text-[9px] uppercase tracking-[0.16em] text-white/30">
+                  Bank
+                </p>
 
-                  <p className="mt-1 text-[13px] text-white/70">
-                    MUHAMMAD SHOUKAT ALI
-                  </p>
-                </div>
+                <p className="mt-1 text-[13px] text-white/70">
+                  UBL
+                </p>
+              </div>
 
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.16em] text-white/30">
-                    Bank
-                  </p>
+              <div>
+                <p className="text-[9px] uppercase tracking-[0.16em] text-white/30">
+                  IBAN
+                </p>
 
-                  <p className="mt-1 text-[13px] text-white/70">
-                    UBL
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.16em] text-white/30">
-                    IBAN
-                  </p>
-
-                  <p className="mt-1 break-all font-mono text-[12px] leading-6 text-white/70">
-                    PK48 UNIL 0109 0002 2401 6672
-                  </p>
-                </div>
+                <p className="mt-1 break-all font-mono text-[12px] leading-6 text-white/70">
+                  PK48 UNIL 0109 0002 2401 6672
+                </p>
               </div>
             </div>
           </div>

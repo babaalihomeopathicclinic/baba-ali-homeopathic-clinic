@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Building2,
   Clock3,
@@ -44,8 +45,9 @@ export default function AboutDoctor() {
       className="bg-[#f7f6f2] py-24 text-[var(--text-dark)]"
     >
       <div className="site-container">
-        <div className="grid gap-16 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
-          {/* Left introduction */}
+        <div className="grid gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-start lg:gap-16">
+
+          {/* Doctor Portrait */}
           <div>
             <div className="flex items-center gap-4">
               <span className="h-px w-10 bg-[var(--gold)]" />
@@ -55,32 +57,45 @@ export default function AboutDoctor() {
               </span>
             </div>
 
-            <h2 className="mt-6 max-w-[430px] font-serif text-[clamp(38px,4vw,54px)] leading-[1.06] tracking-[-0.025em] text-[#111a2c]">
-              A thoughtful and established approach to consultation.
-            </h2>
+            <div className="relative mt-6 overflow-hidden border border-[#d8d2c0] bg-[#111a2c] p-2 shadow-[0_20px_60px_rgba(17,26,44,0.10)]">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="/images/doctor.png"
+                  alt="Dr. Muhammad Shoukat Ali, Consultant Homoeopath"
+                  fill
+                  priority
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
 
-            <p className="mt-6 max-w-[470px] text-[15px] leading-8 text-[#626b7b]">
-              The clinic is led by Dr. Muhammad Shoukat Ali, a qualified
-              Homoeopathic Doctor. The consultation approach is centered on
-              careful listening, individual consideration, and a structured
-              process.
-            </p>
+                {/* Subtle premium overlay */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b1322]/20 via-transparent to-transparent" />
+              </div>
+            </div>
 
-            <div className="mt-8 h-px w-14 bg-[#c9b47a]" />
+            <div className="mt-5 flex items-center justify-between border-t border-[#dcd9d0] pt-4">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#8b7746]">
+                Consultant Homoeopath
+              </span>
+
+              <span className="text-[11px] text-[#7a8290]">
+                20 years of experience
+              </span>
+            </div>
           </div>
 
-          {/* Right content */}
+          {/* Practitioner Information */}
           <div>
-            <div className="border border-[#dddcd7] bg-white p-8 md:p-10">
+            <div className="border border-[#dddcd7] bg-white p-7 md:p-10">
               <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8b7746]">
                     Dr. Muhammad Shoukat Ali
                   </p>
 
-                  <h3 className="mt-3 font-serif text-[34px] leading-tight text-[#111a2c]">
+                  <h2 className="mt-3 font-serif text-[34px] leading-tight text-[#111a2c] md:text-[40px]">
                     Consultant Homoeopath
-                  </h3>
+                  </h2>
 
                   <p className="mt-2 text-[14px] text-[#687184]">
                     Qualified Homoeopathic Doctor
@@ -96,14 +111,16 @@ export default function AboutDoctor() {
                 </div>
               </div>
 
-              <p className="mt-8 max-w-[720px] text-[15px] leading-8 text-[#5e6778]">
-                The clinic's approach is centered on careful listening,
-                individual consideration, and a structured consultation model.
-                Professional credentials and registration information are
-                presented as part of the clinic's professional profile.
+              <div className="mt-7 h-px w-14 bg-[#c9b47a]" />
+
+              <p className="mt-7 max-w-[720px] text-[15px] leading-8 text-[#5e6778]">
+                Dr. Muhammad Shoukat Ali is a qualified Homoeopathic Doctor
+                and Consultant Homoeopath with 20 years of professional
+                experience. His practice is supported by a careful,
+                professional approach to consultation and case assessment.
               </p>
 
-              {/* Credential grid */}
+              {/* Credential Grid */}
               <div className="mt-10 grid gap-px border border-[#e2e1dc] bg-[#e2e1dc] sm:grid-cols-2">
                 {credentials.map((item) => {
                   const Icon = item.icon;

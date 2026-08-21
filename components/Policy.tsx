@@ -9,21 +9,20 @@ import {
 const policyPoints = [
   "Online consultation only",
   "Appointment required",
-  "Initial case assessment fee: PKR 50,000",
-  "Advance payment required to reserve the consultation process",
-  "Consultation requests are reviewed before an appointment is arranged",
+  "Advance payment is required",
+  "Consultation requests are reviewed before acceptance",
   "The clinic accepts selected cases",
-  "The consultation process is intended for serious inquiries",
+  "Serious inquiries are encouraged",
 ];
 
 export default function Policy() {
   return (
     <section
       id="policy"
-      className="bg-white py-24 text-[var(--text-dark)]"
+      className="bg-white py-24 text-[var(--text-dark)] md:py-28"
     >
       <div className="site-container">
-        {/* Section heading */}
+        {/* Heading */}
         <div className="max-w-[760px]">
           <div className="flex items-center gap-4">
             <span className="h-px w-10 bg-[var(--gold)]" />
@@ -34,19 +33,19 @@ export default function Policy() {
           </div>
 
           <h2 className="mt-6 max-w-[700px] font-serif text-[clamp(38px,4.5vw,58px)] leading-[1.05] tracking-[-0.025em] text-[#111a2c]">
-            Please understand the consultation process before requesting an appointment.
+            Important terms before requesting a consultation.
           </h2>
 
           <p className="mt-6 max-w-[670px] text-[15px] leading-8 text-[#626b7b]">
-            The clinic follows a structured consultation model designed to
-            protect reserved consultation time and allow requests to be
-            reviewed carefully.
+            Please review these terms before submitting a consultation
+            request. They explain the consultation format, fee, payment
+            requirements, and important conditions.
           </p>
         </div>
 
-        {/* Main policy layout */}
+        {/* Main policy */}
         <div className="mt-14 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          {/* Policy points */}
+          {/* Before you request */}
           <div className="border border-[#deded9] bg-[#fafaf7] p-8 md:p-10">
             <div className="flex items-center gap-3">
               <ShieldCheck
@@ -82,7 +81,7 @@ export default function Policy() {
             </div>
           </div>
 
-          {/* Fee + payment card */}
+          {/* Main fee and payment card */}
           <div className="border border-[#d9d0b9] bg-[#f8f5eb] p-8 md:p-10">
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8b7746]">
               Initial Case Assessment Fee
@@ -93,9 +92,8 @@ export default function Policy() {
             </p>
 
             <p className="mt-5 text-[14px] leading-7 text-[#626b7b]">
-              The assessment fee is payable in advance as part of the
-              consultation process. Payment confirmation is required before
-              the appointment is arranged.
+              The assessment fee is payable in advance. Please review the
+              applicable refund terms before making payment.
             </p>
 
             {/* Payment account */}
@@ -137,9 +135,7 @@ export default function Policy() {
               </div>
             </div>
 
-            <div className="mt-7 h-px bg-[#ddd5c0]" />
-
-            <div className="mt-7 flex items-start gap-3">
+            <div className="mt-7 flex items-start gap-3 border-t border-[#ddd5c0] pt-7">
               <CircleAlert
                 size={18}
                 strokeWidth={1.4}
@@ -147,8 +143,8 @@ export default function Policy() {
               />
 
               <p className="text-[13px] leading-7 text-[#626b7b]">
-                Submission of a consultation request does not by itself
-                confirm an appointment or guarantee acceptance of a case.
+                Submitting a consultation request does not confirm an
+                appointment or guarantee acceptance of a case.
               </p>
             </div>
           </div>
@@ -157,42 +153,42 @@ export default function Policy() {
         {/* Refund and communication */}
         <div className="mt-8 grid gap-8 lg:grid-cols-2">
           {/* Refund */}
-          <div className="border border-[#deded9] bg-white p-8">
+          <div className="border border-[#deded9] bg-white p-8 md:p-9">
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8b7746]">
               Fee & Refunds
             </p>
 
-            <h3 className="mt-4 font-serif text-[30px] text-[#162039]">
-              Clear terms for reserved consultation time.
+            <h3 className="mt-4 font-serif text-[30px] leading-tight text-[#162039]">
+              Clear terms for consultation payments.
             </h3>
 
             <div className="mt-6 space-y-5 text-[14px] leading-7 text-[#626b7b]">
               <p>
                 Where the agreed consultation service is not provided by the
-                clinic, the applicable fee may be refunded according to the
-                final approved refund policy.
+                clinic, the applicable fee may be refunded in accordance with
+                the applicable refund terms.
               </p>
 
               <p>
                 Where a client misses or cancels an arranged session for
                 reasons attributable to the client, the applicable fee may not
-                be refundable, subject to the final approved terms.
+                be refundable.
               </p>
 
               <p>
-                The final refund wording will clearly explain the applicable
-                circumstances before payment is made.
+                The applicable refund conditions should be understood before
+                payment is made.
               </p>
             </div>
           </div>
 
           {/* Client communication */}
-          <div className="border border-[#deded9] bg-white p-8">
+          <div className="border border-[#deded9] bg-white p-8 md:p-9">
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8b7746]">
               Client Communication
             </p>
 
-            <h3 className="mt-4 font-serif text-[30px] text-[#162039]">
+            <h3 className="mt-4 font-serif text-[30px] leading-tight text-[#162039]">
               Questions or objections
             </h3>
 
@@ -220,8 +216,7 @@ export default function Policy() {
             </p>
 
             <p className="mt-2 text-[13px] text-[#6a7281]">
-              Please make sure you have reviewed the consultation policy
-              first.
+              Please review these terms before submitting your request.
             </p>
           </div>
 

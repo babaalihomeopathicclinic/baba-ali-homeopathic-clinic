@@ -79,9 +79,6 @@ export default function ConsultationRequest() {
       location: String(formData.get("location") || "").trim(),
       concern: String(formData.get("concern") || "").trim(),
       background: String(formData.get("background") || "").trim(),
-      previousTreatment: String(
-        formData.get("previousTreatment") || ""
-      ).trim(),
     };
 
     try {
@@ -117,7 +114,7 @@ export default function ConsultationRequest() {
   return (
     <section
       id="request"
-      className="bg-[#f7f6f2] py-24 text-[var(--text-dark)]"
+      className="bg-[#f7f6f2] py-24 text-[var(--text-dark)] md:py-28"
     >
       <div className="site-container">
         {/* Heading */}
@@ -131,13 +128,13 @@ export default function ConsultationRequest() {
           </div>
 
           <h2 className="mt-6 max-w-[700px] font-serif text-[clamp(38px,4.5vw,58px)] leading-[1.05] tracking-[-0.025em] text-[#111a2c]">
-            Begin with a structured consultation request.
+            Begin with a consultation request.
           </h2>
 
           <p className="mt-6 max-w-[670px] text-[15px] leading-8 text-[#626b7b]">
             Please provide the information needed for an initial review.
-            This form is intended for consultation requests and is not a full
-            medical history.
+            This form is intended for a consultation request and is not a
+            full medical history.
           </p>
         </div>
 
@@ -189,7 +186,10 @@ export default function ConsultationRequest() {
 
               {/* Background */}
               <div>
-                <label htmlFor="background" className="block">
+                <label
+                  htmlFor="background"
+                  className="block"
+                >
                   <span className="mb-2 block text-[12px] font-medium text-[#30394b]">
                     Brief background
                   </span>
@@ -199,23 +199,6 @@ export default function ConsultationRequest() {
                     name="background"
                     rows={5}
                     placeholder="Please share only the basic information relevant to your initial request."
-                    className="w-full resize-y border border-[#d9dce2] bg-[#fcfcfb] px-4 py-3 text-[13px] leading-6 text-[#172036] outline-none transition-colors placeholder:text-[#a0a6b1] focus:border-[#b69d63]"
-                  />
-                </label>
-              </div>
-
-              {/* Previous treatment */}
-              <div>
-                <label htmlFor="previousTreatment" className="block">
-                  <span className="mb-2 block text-[12px] font-medium text-[#30394b]">
-                    Previous consultation / treatment information
-                  </span>
-
-                  <textarea
-                    id="previousTreatment"
-                    name="previousTreatment"
-                    rows={4}
-                    placeholder="Optional. Please avoid unnecessary sensitive medical details at this stage."
                     className="w-full resize-y border border-[#d9dce2] bg-[#fcfcfb] px-4 py-3 text-[13px] leading-6 text-[#172036] outline-none transition-colors placeholder:text-[#a0a6b1] focus:border-[#b69d63]"
                   />
                 </label>
@@ -355,53 +338,14 @@ export default function ConsultationRequest() {
               </div>
 
               <h3 className="mt-6 font-serif text-[28px] leading-tight text-[#162039]">
-                A private and structured request.
+                A private consultation request.
               </h3>
 
               <p className="mt-4 text-[13px] leading-7 text-[#626b7b]">
-                The initial form is designed to help the clinic understand
-                whether a consultation request is appropriate before the next
-                step is arranged.
+                This form is intended for an initial consultation request.
+                Please provide only the information needed for the clinic to
+                review your request.
               </p>
-
-              <div className="mt-7 space-y-4 border-t border-[#ddd5c0] pt-6">
-                <div className="flex items-start gap-3">
-                  <Check
-                    size={15}
-                    strokeWidth={1.7}
-                    className="mt-1 shrink-0 text-[#8b7746]"
-                  />
-
-                  <p className="text-[12px] leading-6 text-[#687183]">
-                    Initial request is reviewed by the clinic.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Check
-                    size={15}
-                    strokeWidth={1.7}
-                    className="mt-1 shrink-0 text-[#8b7746]"
-                  />
-
-                  <p className="text-[12px] leading-6 text-[#687183]">
-                    Payment details are provided through the approved process.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Check
-                    size={15}
-                    strokeWidth={1.7}
-                    className="mt-1 shrink-0 text-[#8b7746]"
-                  />
-
-                  <p className="text-[12px] leading-6 text-[#687183]">
-                    Appointment arrangements follow the required confirmation
-                    process.
-                  </p>
-                </div>
-              </div>
 
               <div className="mt-7 border-t border-[#ddd5c0] pt-6">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#8b7746]">
@@ -410,7 +354,7 @@ export default function ConsultationRequest() {
 
                 <a
                   href="mailto:info@babaalihomeopathicclinic.com"
-                  className="mt-3 inline-flex items-center gap-2 text-[12px] font-medium text-[#273149] hover:text-[#7d6938]"
+                  className="mt-3 inline-flex items-center gap-2 text-[12px] font-medium text-[#273149] transition-colors hover:text-[#7d6938]"
                 >
                   <Mail size={15} strokeWidth={1.5} />
                   info@babaalihomeopathicclinic.com
